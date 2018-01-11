@@ -1,1 +1,12 @@
-<h1>Home Page</h1>
+<!DOCTYPE html>
+<!-- <h1>Home Page</h1> -->
+<main class="title">
+    <section class="sidebar">
+        <h1>Bloc Chat</h1>
+        <div class="room-list">
+        <ul ng-repeat="room in home.rooms">
+            <li> {{room.$value}} </li>
+        </ul>
+        </div>
+    </section>
+</main>

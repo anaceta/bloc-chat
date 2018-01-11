@@ -1,0 +1,12 @@
+.title {
+  height: 100%;
+}
+
+.sidebar {
+  float: left;
+  width: 25%;
+  background-color: #c0c0c0;
+  padding: 35px;
+  margin-right: 35px;
+  min-height: 100%;
+}
