@@ -6,8 +6,14 @@
         <div class="room-list">
             <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
         <ul ng-repeat="room in home.rooms">
-            <li> {{room.$value}} </li>
+            <li ng-click="home.setCurrentRoom(room)"> {{room.name}} </li>
         </ul>
         </div>
     </section>
+        <h3 class ="current-room">{{ home.currentRoom.name }}</h3>
+        <div class="messages" ng-repeat="message in home.messages">
+        <div class="username">{{ message.username }}</div>
+        <div class="time-stamp">{{ message.sentAt }}</div>
+        <div class="user-message">{{ message.content }}</div>
+</div>
 </main>
