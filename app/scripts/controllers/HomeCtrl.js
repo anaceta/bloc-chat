@@ -6,7 +6,7 @@
             $uibModal.open({
                 templateUrl: '/templates/modal.html',
                 size: 'sm',
-                controller: 'ModalCtrl as modal'
+                controller: 'ModalCtrl as modal',
             });
         }
 
@@ -14,6 +14,7 @@
           this.currentRoom = room;
           this.messages = Message.getByRoomId(this.currentRoom.$id);
         }
+
     }
 
     angular

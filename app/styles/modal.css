@@ -1,7 +1,12 @@
-h1 {
-  color: #4a4a4a;
+.modal-box {
+  position: fixed;
+  margin-left: 50%;
+  border: 1px solid black;
+  padding: 1rem;
+  margin-top: 20%;
+  background-color: white;
 }
 
-li {
-  color: #000000;
+.modal-footer {
+  padding-top: 10%;
 }

@@ -1,0 +1,12 @@
+<section class="modal-box">
+    <div class="modal-header">
+        <h3 class="modal-title">Set a Username</h3>
+    </div>
+    <div class="modal-body">
+        <h5 class="user-modal-prompt">Create a username</h5>
+            <input class="user-blank-boxtype" type="text" name="input" ng-model="username.username" title="username" required>
+    </div>
+    <div class="modal-footer">
+        <button class="user-btn-new" type="button" ng-click="username.setUsername()" ng-disabled="username.username === undefined || username.username === ''">Set Username</button>
+    </div>
+</section>
