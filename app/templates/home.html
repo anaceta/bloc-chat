@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <!-- <h1>Home Page</h1> -->
 <main class="title">
-    <section class="sidebar">
-        <h1 class="sidebar-title">Bloc Chat</h1>
-        <div class="room-list">
-            <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
-        <ul ng-repeat="room in home.rooms">
-            <li ng-click="home.setCurrentRoom(room)">{{room.name}} </li>
-        </ul>
+  <section class="sidebar">
+    <h1 class="sidebar-title">Bloc Chat</h1>
+    <span class="new-room-button" type="button" ng-click="home.addRoom()">New Room</span>
+    <div class="room-names" ng-repeat="room in home.rooms">
+      <h3 ng-click="home.setCurrentRoom(room)">{{room.name}}</h3>
+    </div>
+  </section>
+  <section class="main-bar">
+    <h3 class="current-room">{{ home.currentRoom.name }}</h3>
+    <div class="messages" ng-repeat="message in home.messages">
+      <div class="username">{{ message.username }} : {{ message.content }}</div>
+      <div class="time-stamp">{{ message.sentAt | date: "shortTime" }}</div>
+    </div>
+
+    <div class="new-form-messages">
+      <input type="text" name="input" placeholder="Type your message here" class="message-box" ng-model="home.newMessage.content">
+      <button class="new-btn-message" type="button" ng-click="home.sendMessage()">Send message</button>
+    </div>
+    <!--  <input class="form-new-messages" type="text" ng-submit="home.sendMessage(home.message)"/>
+          <input type = "submit" value = "Submit" />
+          Messages are sending need filter system to filter by roomId
+
+        -->
+
+    <!-- <form ng-submit = "home.sendMessage(home.message)">
+          Enter text and hit Enter:
+          <input type = "text" ng-model = "home.message" name = "text"/>
+          <input type = "submit" id ="submit" value = "Submit"/>
+        </form>
         </div>
-    </section>
-        <h3 class ="current-room">{{ home.currentRoom.name }}</h3>
-        <div class="messages" ng-repeat="message in home.messages">
-        <div class="username">{{ message.username }}</div>
         <div class="time-stamp">{{ message.sentAt }}</div>
-        <div class="user-message">{{ message.content }}</div>
-</div>
+        <div class="user-message">{{ message.content }}</div> -->
+  </section>
 </main>

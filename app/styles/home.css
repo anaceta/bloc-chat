@@ -10,3 +10,26 @@
   margin-right: 35px;
   min-height: 100%;
 }
+
+.main-bar {
+  position: absolute;
+  margin-left: 26%;
+  width: 100%;
+}
+
+.messages{
+  width: 100%;
+  border: 1px solid black;
+  padding: 1%;
+  display: inline-block;
+}
+
+.time-stamp{
+  position: relative;
+  margin-left: 40%;
+}
+
+.new-form-messages {
+  position: relative;
+  padding-top: 1%;
+}

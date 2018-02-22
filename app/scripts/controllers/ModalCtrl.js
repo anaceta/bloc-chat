@@ -1,7 +1,7 @@
 (function() {
     function ModalCtrl(Room, $uibModalInstance) {
         this.cancel = function () {
-            $uibModalInstance.dismiss();
+            $uibModalInstance.close();
         };
 
         this.submit = function () {
